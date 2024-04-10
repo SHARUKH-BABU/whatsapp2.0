@@ -5,8 +5,10 @@ const dotenv = require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+const cors = require("cors")
 
 app.use(express.static("./public"));
+app.use(cors({origin:"*"}));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
