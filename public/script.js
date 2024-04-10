@@ -1,5 +1,4 @@
 const socket = io();
-
 document.addEventListener("DOMContentLoaded", () => {
   let inputMsg = document.getElementById("input-msg");
   let chatMessages = document.querySelector(".chat-messages");
